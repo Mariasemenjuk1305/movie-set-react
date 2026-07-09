@@ -38,20 +38,22 @@ function Home() {
 
   return (
     <div className="home">
-      {error && "Failed to load...."}
-      <form onSubmit={searchHandler}>
-        <input
-          type="text"
-          placeholder="Enter name"
-          onChange={(e) => setSearch(e.target.value.trim())}
-          value={search}
-        />
-        <button type="submit">Search</button>
-      </form>
       <div className="container">
-        {movies?.map((movie) => (
-          <MovieCard movie={movie} />
-        ))}
+        {error && "Failed to load...."}
+        <form onSubmit={searchHandler}>
+          <input
+            type="text"
+            placeholder="Enter name"
+            onChange={(e) => setSearch(e.target.value.trim())}
+            value={search}
+          />
+          <button type="submit">Search</button>
+        </form>
+        <div className="main-block">
+          {movies?.map((movie) => (
+            <MovieCard movie={movie} />
+          ))}
+        </div>
       </div>
     </div>
   );
