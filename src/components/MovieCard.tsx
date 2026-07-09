@@ -9,12 +9,13 @@ export const MovieCard = ({ movie } : MovieCardProps) => {
     return (
         <div className='movie-card'>
             <div className='movie-poster'>
-                <img src={movie.Poster} alt={movie.Title} />
+                <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
                 <button>❤</button>
             </div>
             <div className='movie-info'>
-                <p className='relise-date'>{movie.Released}</p>
-                <p className='movie-description'>{movie.Plot}</p>
+                <p className='movie-name'>{movie.title}</p>
+                <p className='relise-date'>{movie.release_date}</p>
+                <p className='movie-description'>{movie.overview}</p>
             </div>
         </div>
     )

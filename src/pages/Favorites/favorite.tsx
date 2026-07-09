@@ -1,6 +1,6 @@
 import React from "react";
-import { MovieCard } from '../../components/MovieCard';
-import { type Movie } from '../../types.ts/movie';
+// import { MovieCard } from '../../components/MovieCard';
+// import { type Movie } from '../../types.ts/movie';
 
 function Favorite(){
 
